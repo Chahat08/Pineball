@@ -4,40 +4,31 @@ using UnityEngine;
 
 public class FlipperMovement : MonoBehaviour
 {
-    public GameObject point;
-    public float angle = 30f;
-    private Vector3 axis = new Vector3(0, 0, 1);
+    
+    HingeJoint2D hinge;
 
-    public float restPosition = 0f;
-    public float pressedPosition = 45f;
-    public float hitStrength = 10000f;
-    public float flipperDamper = 150f;
+    public float force = 50;
+    public float minAngle = 30;
 
-    HingeJoint hinge;
-
-    private void Start()
+    void Start()
     {
-        hinge = GetComponent<HingeJoint>();
-        hinge.useSpring = true;
+        hinge = GetComponent<HingeJoint2D>();
     }
 
-
-    // Update is called once per frame
     void Update()
     {
-        JointSpring spring = new JointSpring();
-        spring.spring = hitStrength;
-        spring.damper = flipperDamper;
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown("a"))
+        {
+            float targetForce = hinge.referenceAngle - hinge.jointAngle;
+            targetForce = Mathf.Sign(targetForce) * Mathf.Max(0, Mathf.Abs(targetForce) - minAngle);
 
-        if(Input.GetKey(KeyCode.LeftArrow)||Input.GetKey("a"))
-        {
-            spring.targetPosition = pressedPosition;
+            AddTorqueAtPosition(GetComponent<Rigidbody2D>(), force * targetForce, transform.TransformPoint(hinge.anchor));
         }
-        else
-        {
-            spring.targetPosition = restPosition;
-        }
-        hinge.spring = spring;
-        hinge.useLimits = true;
     }
+    public static void AddTorqueAtPosition(Rigidbody2D rb, float torque, Vector2 rotationPoint, ForceMode2D forceMode = ForceMode2D.Impulse)
+    {
+        rb.AddForceAtPosition(-Vector2.up * torque * rb.inertia, rotationPoint + Vector2.right, forceMode);
+        rb.AddForceAtPosition(Vector2.up * torque * rb.inertia, rotationPoint - Vector2.right, forceMode);
+    }
+
 }
