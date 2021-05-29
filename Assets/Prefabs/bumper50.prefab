@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4671037373778556613}
   - component: {fileID: 4671037373778556612}
-  - component: {fileID: 4671037373778556611}
   - component: {fileID: 4671037373778556610}
   m_Layer: 0
-  m_Name: bumper
+  m_Name: bumper50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,22 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4671037373778556611
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671037373778556609}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3f76d819b04f27a4f9928af4dcd527c3, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.04034726, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.90947866
 --- !u!68 &4671037373778556610
 EdgeCollider2D:
   m_ObjectHideFlags: 0
