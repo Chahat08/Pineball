@@ -11,8 +11,6 @@ public class FlipperMovement2 : MonoBehaviour
     void Start()
     {
         hinge = GetComponent<HingeJoint2D>();
-        Debug.Log(hinge.referenceAngle);
-        Debug.Log(hinge.jointAngle);
 
     }
 
