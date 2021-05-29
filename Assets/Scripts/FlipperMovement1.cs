@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class FlipperMovement : MonoBehaviour
+public class FlipperMovement1 : MonoBehaviour
 {
     
     HingeJoint2D hinge;
