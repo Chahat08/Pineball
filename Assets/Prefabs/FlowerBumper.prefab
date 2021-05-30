@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2529476047169232182}
   - component: {fileID: 7046446334010189609}
-  - component: {fileID: 2045471271563382751}
   - component: {fileID: 51255378689705915}
+  - component: {fileID: 3604102798452941427}
   m_Layer: 0
   m_Name: FlowerBumper
-  m_TagString: Untagged
+  m_TagString: Flowers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,69 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2045471271563382751
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5467422972734770614}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3f76d819b04f27a4f9928af4dcd527c3, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.19, y: 2.09}
-    newSize: {x: 2.72, y: 2.13}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.1899999, y: -0.66499996}
-      - {x: 0.74, y: -0.015}
-      - {x: 0.35999998, y: 0.53499997}
-      - {x: 0.29, y: 0.625}
-      - {x: 0.22999999, y: 0.715}
-      - {x: 0.14999999, y: 0.885}
-      - {x: 0.14, y: 0.965}
-      - {x: 0.08, y: 1.035}
-      - {x: 0.01, y: 1.035}
-      - {x: -0.07, y: 0.955}
-      - {x: -0.14999999, y: 0.835}
-      - {x: -0.22999999, y: 0.72499996}
-      - {x: -0.31, y: 0.60499996}
-      - {x: -0.35999998, y: 0.545}
-      - {x: -0.41, y: 0.475}
-      - {x: -0.48999998, y: 0.36499998}
-      - {x: -0.53999996, y: 0.295}
-      - {x: -1, y: -0.345}
-      - {x: -1.28, y: -0.73499995}
-      - {x: -1.3299999, y: -0.815}
-      - {x: -1.35, y: -0.84499997}
-      - {x: -1.35, y: -0.895}
-      - {x: -1.3299999, y: -0.935}
-      - {x: -1.25, y: -0.965}
-      - {x: -1.1, y: -0.965}
-      - {x: -0.78, y: -0.97499996}
-      - {x: -0.77, y: -0.98499995}
-      - {x: -0.59, y: -0.995}
-      - {x: -0.42, y: -1.005}
-      - {x: -0.24, y: -1.015}
-      - {x: 0.099999994, y: -1.035}
-      - {x: 0.28, y: -1.045}
-      - {x: 0.45, y: -1.055}
-      - {x: 0.63, y: -1.0649999}
-      - {x: 1.29, y: -1.0649999}
-      - {x: 1.3299999, y: -1.055}
-      - {x: 1.36, y: -1.025}
-      - {x: 1.36, y: -0.91499996}
 --- !u!58 &51255378689705915
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,10 +92,23 @@ CircleCollider2D:
   m_GameObject: {fileID: 5467422972734770614}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3f76d819b04f27a4f9928af4dcd527c3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.0949999
+--- !u!114 &3604102798452941427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5467422972734770614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5396952364ba749940407542805d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}

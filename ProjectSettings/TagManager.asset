@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Flipper
+  - Flowers
+  - Rocks
+  - Bushes
+  - IcyStuff
+  - Edges
   layers:
   - Default
   - TransparentFX
