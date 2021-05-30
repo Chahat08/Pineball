@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        Debug.Log("Game Over!");
+        SceneManager.LoadScene(2);
     }
     private void ResetBoard()
     {
