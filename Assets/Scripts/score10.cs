@@ -7,6 +7,7 @@ public class score10 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        GetComponent<AudioSource>().Play();
         int s = int.Parse(score.text);
         score.text = (s + 10).ToString();
     }

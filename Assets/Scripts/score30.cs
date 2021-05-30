@@ -9,6 +9,7 @@ public class score30 : MonoBehaviour
     {
         int s = int.Parse(score.text);
         score.text = (s + 30).ToString();
+        GetComponent<AudioSource>().Play();
     }
 
 }
