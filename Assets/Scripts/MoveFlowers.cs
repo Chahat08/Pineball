@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class MoveFlowers : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class MoveFlowers : MonoBehaviour
 
     Vector2 initPos;
     public float invokeAfter = 2f;
+
+    public MoveText mt;
+    public score1000 s;
 
     private void Start()
     {
@@ -58,15 +62,28 @@ public class MoveFlowers : MonoBehaviour
             atEnd = false;
         }
     }
-   private void OnCollisionEnter2D(Collision2D collision)
+   /*private void OnCollisionEnter2D(Collision2D collision)
     {
         gameObject.SetActive(false);
+        mt.disappear();
         Invoke("ShowAgain", invokeAfter);
+    }*/
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        s.AddScore();
+        Invoke("HideNow", 0.5f);
     }
+    private void HideNow()
+    {
+        gameObject.SetActive(false);
+        mt.disappear();
+        Invoke("ShowAgain", invokeAfter);
 
+    }
     private void ShowAgain()
     {
         gameObject.transform.position = initPos;
         gameObject.SetActive(true);
+        mt.reappear();
     }
 }

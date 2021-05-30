@@ -94,7 +94,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 3f76d819b04f27a4f9928af4dcd527c3, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -148,3 +148,5 @@ MonoBehaviour:
   forceMag: 10
   reboundMag: 3
   invokeAfter: 2
+  mt: {fileID: 0}
+  s: {fileID: 0}
